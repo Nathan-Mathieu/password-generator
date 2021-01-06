@@ -1,0 +1,244 @@
+/* reset */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --main: #06d6a0;
+    }
+    
+    body {
+      width: 100%;
+      min-height: 100vh;
+    
+      font-family: "Varela Round", sans-serif;
+      color: white;
+    
+      background: rgb(76, 46, 185);
+      background: linear-gradient(
+        90deg,
+        rgba(76, 46, 185, 1) 0%,
+        rgba(54, 26, 144, 1) 50%,
+        rgba(76, 46, 185, 1) 100%
+      );
+    }
+    
+    h1 {
+      color: white;
+      font-family: "Syne", sans-serif;
+      letter-spacing: 3px;
+      font-size: 3.5rem;
+    
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    h4 {
+      font-weight: 100;
+    }
+    
+    .hide {
+      visibility: hidden;
+    }
+    .container {
+      margin-top: 5rem;
+      position: absolute;
+    }
+    
+    .hr { 
+      width: 350px;
+      height: 1px;
+      margin: 1rem auto 1rem auto;
+      background-color: white;
+    }
+    
+    .hr-2 {
+      width: 300px;
+      height: 1px;
+      margin: 1rem 0 1rem auto;
+      background-color: rgba(255, 255, 255, 0.329);
+    }
+    
+    input {
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+    input::placeholder {
+      font-size: 0.8rem;
+      opacity: 0.5;
+    }
+    input:focus {
+      outline: none;
+    }
+    
+    /* form */
+    .formulaire {
+      width: auto;
+      height: auto;
+      padding: 45px;
+      padding-bottom: 20px;
+      margin: 2rem;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(
+        45deg,
+        rgba(97, 46, 185, 0.5) 8%,
+        rgba(108, 41, 242, 0.5) 50%,
+        rgba(68, 42, 185, 0.5) 100%
+      );
+    
+      display: flex;
+      justify-content: center;
+    
+      box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.247);
+    }
+    
+    .password {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .password input {
+      width: 300px;
+      height: 40px;
+      border-radius: 5px;
+      border: none;
+    }
+    
+    .password i {
+      font-size: 38px;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+    
+    .password i:hover {
+      color: var(--main);
+    }
+    
+    .generate-btn {
+      padding: 0.5rem;
+      margin: 1rem auto 0 auto;
+      border-radius: 5px;
+      border: none;
+      color: #2e167a;
+      cursor: pointer;
+      font-size: 2rem;
+    }
+    .generate-btn:hover {
+      background-color: var(--main);
+      color: white;
+    }
+    /* options */
+    .options-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .options-item input {
+      width: 150px;
+      height: 30px;
+      border-radius: 5px;
+      border: none;
+    }
+    
+    /* SWITCHES  */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+    
+    input:checked + .slider {
+      background-color: var(--main);
+    }
+    
+    input:focus + .slider {
+      box-shadow: 0 0 1px var(--main);
+    }
+    
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+    
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+    
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    
+    /* tooltip */
+    .container-all {
+      display: block;
+      margin: auto;
+      width: 550px;
+    }
+    .relative {
+      position: relative;
+    }
+    .tooltip {
+      position: absolute;
+      top: 210px;
+      right: 36px;
+      z-index: 2;
+      padding: 5px;
+      background-color: var(--main);
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 5px 5px 0 rgba(17, 17, 17, 0.178);
+    }
+    .tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: var(--main) transparent transparent transparent;
+    }
+    
